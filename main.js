@@ -20,7 +20,6 @@ async function main() {
     benchCmd = benchCmd.concat(["--bench", cargoBenchName]);
   }
 
-  core.debug("I'M WALKIN HEAH");
   core.debug("### Install Critcmp ###");
   await exec.exec("cargo", ["install", "critcmp"]);
 
@@ -31,6 +30,7 @@ async function main() {
     options
   );
   core.debug("Changes benchmarked");
+  await exec.exec("git", ["fetch"]);
   await exec.exec("git", ["checkout", core.getInput("branchName") || github.base_ref]);
   core.debug("Checked out to base branch");
   await exec.exec(
