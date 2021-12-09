@@ -9,7 +9,7 @@ inputs:
     description: "Sets the directory to run the benchmarks, relative to the project directory"
     required: false
     default: ""
-  token:
+  branchName:
     description: "Branch to compare against"
     required: false
     default: "master"
