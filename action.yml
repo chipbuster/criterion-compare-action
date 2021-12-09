@@ -9,6 +9,10 @@ inputs:
     description: "Sets the directory to run the benchmarks, relative to the project directory"
     required: false
     default: ""
+  token:
+    description: "Branch to compare against"
+    required: false
+    default: "master"
 runs:
   using: "node12"
   main: "dist/index.js"
