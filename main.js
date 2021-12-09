@@ -20,7 +20,7 @@ async function main() {
     benchCmd = benchCmd.concat(["--bench", cargoBenchName]);
   }
 
-  core.debug("I'M WALKIN HEAH")
+  core.debug("I'M WALKIN HEAH");
   core.debug("### Install Critcmp ###");
   await exec.exec("cargo", ["install", "critcmp"]);
 
